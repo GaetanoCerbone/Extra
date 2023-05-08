@@ -17,7 +17,11 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/',[PublicController::class, 'homepage'])->name('homepage');
 
+// BOOKS
 Route::get('book/create',[BookController::class, 'create'])->name('book.create');
 Route::post('/book/store', [BookController::class, 'store'])->name('book.store');
 Route::get('/book/index', [BookController::class, 'index'])->name('book.index');
+
+// MAIL
+Route::post('/contattaci',[PublicController::class, 'contaact'])->name('');
 

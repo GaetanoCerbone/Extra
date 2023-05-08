@@ -9,7 +9,7 @@
             <a class="nav-link @if(Route::currentRouteName() == 'book.create') active @endif" href="{{route('book.create')}}">Inserisci un libro</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=" @if(Route::currentRouteName() == 'book.index') active @endif" href="{{route('book.index')}}">Lista</a>
+            <a class="nav-link @if(Route::currentRouteName() == 'book.index') active @endif" href="{{route('book.index')}}">Lista</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Contattaci</a>
