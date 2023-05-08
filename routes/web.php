@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PublicController;
@@ -23,5 +24,7 @@ Route::post('/book/store', [BookController::class, 'store'])->name('book.store')
 Route::get('/book/index', [BookController::class, 'index'])->name('book.index');
 
 // MAIL
-Route::post('/contattaci',[PublicController::class, 'contaact'])->name('');
+Route::get('contact',[ContactController::class, 'contact'])->name('contattaci');
+// Route::post('contact/us',[ContactController::class, 'send_email'])->name('contact.us');
+Route::post('contact/us', [ContactController::class, 'contact_us'])->name('contact.us');
 

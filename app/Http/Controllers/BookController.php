@@ -12,12 +12,6 @@ class BookController extends Controller
     }
 
     public function store(Request $request){
-        // $book = new Book();
-        // $book->title = $request->title;
-        // $book->author = $request->author;
-        // $book->description = $request->description;
-        // $book->save();
-        // dd($book);
             $book = Book::create([
             'title'=> $request->title,
             'author'=> $request->author,

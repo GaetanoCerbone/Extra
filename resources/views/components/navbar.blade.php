@@ -12,7 +12,7 @@
             <a class="nav-link @if(Route::currentRouteName() == 'book.index') active @endif" href="{{route('book.index')}}">Lista</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Contattaci</a>
+            <a class="nav-link @if(Route::currentRouteName() == 'contattaci') active @endif" href="{{route('contattaci')}}">Contattaci</a>
           </li>
         </ul>
       </div>
