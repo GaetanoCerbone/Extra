@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
 {
@@ -11,11 +12,13 @@ class BookController extends Controller
         return view('book.create');
     }
 
-    public function store(Request $request){
+    public function store(BookRequest $request){
             $book = Book::create([
             'title'=> $request->title,
             'author'=> $request->author,
-            'description'=> $request->description]);
+            'description'=> $request->description,
+            'cover'=> $request-> file('cover')->store('public/covers'),
+        ]);
             return redirect(route('homepage'))->with('bookCreated','Hai inserito un libro con successo');
         }
         public function index(){
